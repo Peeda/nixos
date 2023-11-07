@@ -86,10 +86,8 @@
     description = "peter";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-     brave
      gitFull
      gh
-     neofetch
     ];
   };
 

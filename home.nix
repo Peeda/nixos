@@ -51,8 +51,8 @@
     ".config/starship.toml".source = ./configs/starship.toml;
     ".config/fish/config.fish".source = ./configs/config.fish;
     ".config/kitty/kitty.conf".source = ./configs/kitty.conf;
-    ".config/hypr/hyprland.conf".source = .configs/hyprland.conf;
-    ".config/hyprl/hyprpaper.confg".source = .configs/hyprpaper.conf;
+    ".config/hypr/hyprland.conf".source = ./configs/hyprland.conf;
+    ".config/hypr/hyprpaper.conf".source = ./configs/hyprpaper.conf;
     # ".config/nvim".source = builtins.fetchGit {
       # url = "https://github.com/NvChad/NvChad.git";
       # rev = "a8413849cf9d648df0ae81a9349c8b125e628919";

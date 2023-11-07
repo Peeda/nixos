@@ -72,5 +72,6 @@
   programs.git = {
     enable = true;
     userName = "Peter";
+    userEmail = "107806301+Peeda@users.noreply.github.com";
   };
 }

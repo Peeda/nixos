@@ -88,6 +88,7 @@
     packages = with pkgs; [
      brave
      gitFull
+     gh
      neofetch
     ];
   };

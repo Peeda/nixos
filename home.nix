@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = _: true;
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "peter";
@@ -32,6 +32,21 @@
       pkgs.gammastep
       pkgs.hyprpaper
       pkgs.waybar
+
+      pkgs.ripgrep
+      pkgs.wl-clipboard
+      pkgs.cargo
+      pkgs.rustc
+      pkgs.rust-analyzer
+      pkgs.gcc
+      pkgs.clang-tools
+      pkgs.jdk
+      pkgs.python3
+
+      pkgs.jetbrains-toolbox
+
+      pkgs.spotify
+      pkgs.discord
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello

@@ -35,6 +35,7 @@
 
       pkgs.ripgrep
       pkgs.wl-clipboard
+      pkgs.nil
       pkgs.cargo
       pkgs.rustc
       pkgs.rust-analyzer

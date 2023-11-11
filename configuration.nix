@@ -146,6 +146,6 @@
   programs.fish.enable = true;
 
   systemd.extraConfig = ''
-      DefaultTimeoutStepSec = 15s
+      DefaultTimeoutStopSec=15s
   '';
 }

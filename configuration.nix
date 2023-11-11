@@ -11,9 +11,8 @@
     ];
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -56,6 +55,12 @@
   services.xserver = {
     layout = "us";
     xkbVariant = "";
+    libinput = {
+        enable = true;
+	mouse = {
+	    accelProfile = "flat";
+	};
+    };
   };
 
   # Enable CUPS to print documents.
@@ -102,7 +107,7 @@
   ];
 
   fonts.fonts = with pkgs; [
-    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     corefonts
   ];
 
@@ -139,4 +144,8 @@
   environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.fish;
   programs.fish.enable = true;
+
+  systemd.extraConfig = ''
+      DefaultTimeoutStepSec = 15s
+  '';
 }

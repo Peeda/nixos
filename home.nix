@@ -23,6 +23,7 @@
       
       pkgs.neofetch
 
+      pkgs.krabby
       pkgs.kitty
       pkgs.neovim
       pkgs.ripgrep

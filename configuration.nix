@@ -103,9 +103,10 @@
 # List packages installed in system profile. To search, run:
 # $ nix search wget
     environment.systemPackages = with pkgs; [
-        vim 
+            vim 
             fish
             openssh
+            unzip
     ];
 
     fonts.fonts = with pkgs; [

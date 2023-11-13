@@ -19,7 +19,7 @@
 # The home.packages option allows you to install Nix packages into your
 # environment.
         home.packages = [
-        pkgs.brave
+            pkgs.brave
 
             pkgs.neofetch
 
@@ -40,6 +40,7 @@
             pkgs.rustc
             pkgs.rust-analyzer
             pkgs.gcc
+            pkgs.gnumake
             pkgs.clang-tools
             pkgs.jdk
             pkgs.python3

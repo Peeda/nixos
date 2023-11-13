@@ -22,10 +22,12 @@
 # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
 # Enable networking
-        networking.networkmanager.enable = true;
+    networking.networkmanager.enable = true;
 
 # Set your time zone.
     time.timeZone = "America/New_York";
+    # fix dual boot time
+    time.hardwareClockInLocalTime = true;
 
 # Select internationalisation properties.
     i18n.defaultLocale = "en_US.UTF-8";
@@ -137,8 +139,7 @@
 # Before changing this value read the documentation for this option
 # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
     system.stateVersion = "23.05"; # Did you read the comment?
-
-        nix.optimise.automatic = true;
+    nix.optimise.automatic = true;
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
     environment.shells = with pkgs; [ zsh ];

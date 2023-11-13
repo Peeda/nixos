@@ -30,7 +30,6 @@
             pkgs.starship
 
             pkgs.wofi
-            pkgs.gammastep
             pkgs.hyprpaper
             pkgs.waybar
 
@@ -117,5 +116,14 @@
     };
     programs.gh = {
         enable = true;
+    };
+    services.gammastep = {
+        enable = true;
+        dawnTime = "0:00-6:59";
+        duskTime = "7:00-11:59";
+        temperature = {
+            day = 6500;
+            night = 3200;
+        };
     };
 }

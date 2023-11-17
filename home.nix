@@ -49,6 +49,11 @@
 
             pkgs.spotify
             pkgs.discord
+
+            pkgs.mgba
+            pkgs.meson
+            pkgs.ninja
+            pkgs.gcc-arm-embedded-11
 # # Adds the 'hello' command to your environment. It prints a friendly
 # # "Hello, world!" when run.
 # pkgs.hello
@@ -120,8 +125,8 @@
     };
     services.gammastep = {
         enable = true;
-        dawnTime = "0:00-6:59";
-        duskTime = "7:00-11:59";
+        dawnTime = "0:00-4:59";
+        duskTime = "5:00-11:59";
         temperature = {
             day = 6500;
             night = 3200;

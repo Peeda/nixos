@@ -22,6 +22,7 @@
             pkgs.brave
 
             pkgs.neofetch
+            pkgs.lazygit
 
             pkgs.krabby
             pkgs.kitty
@@ -54,6 +55,8 @@
             pkgs.meson
             pkgs.ninja
             pkgs.gcc-arm-embedded-11
+
+            pkgs.llvm
 # # Adds the 'hello' command to your environment. It prints a friendly
 # # "Hello, world!" when run.
 # pkgs.hello

@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports =
+    [
+      ../../modules/hyprland.nix
+    ];
   nixpkgs.config.allowUnfreePredicate = _: true;
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

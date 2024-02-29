@@ -37,6 +37,7 @@
     krabby
     starship
     ripgrep
+    trashy
 
     rust-analyzer
     clang-tools
@@ -106,6 +107,7 @@
       rlox = "~/Programming/crafting-interpreters/rlox/src";
       rustboy = "cd ~/Programming/rustboy/rustboy-core/src/";
       r = "sudo modprobe -r hid-multitouch && sudo modprobe hid-multitouch";
+      config = "cd ~/nixos/hosts/default/";
     };
   };
   # Let Home Manager install and manage itself.

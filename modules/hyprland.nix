@@ -8,7 +8,6 @@
     font-awesome
     brightnessctl
     pulseaudio
-    copyq
   ];
   home.file.".config/hypr/hyprpaper.conf".text = ''
     preload = ~/nixos/wallpapers/serenity.jpeg

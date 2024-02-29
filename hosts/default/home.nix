@@ -22,29 +22,29 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
-    pkgs.brave
-    pkgs.dolphin
-    pkgs.spotify
-    pkgs.neovim
-    pkgs.kitty
-    pkgs.cargo
-    pkgs.stow
-    pkgs.lazygit
-    pkgs.neofetch
-    pkgs.onefetch
-    pkgs.distrobox
-    pkgs.krabby
-    pkgs.starship
-    pkgs.ripgrep
+  home.packages = with pkgs; [
+    brave
+    dolphin
+    spotify
+    neovim
+    kitty
+    cargo
+    stow
+    lazygit
+    neofetch
+    onefetch
+    distrobox
+    krabby
+    starship
+    ripgrep
 
-    pkgs.rust-analyzer
-    pkgs.clang-tools
-    pkgs.nil
+    rust-analyzer
+    clang-tools
+    nil
 
-    pkgs.cmake
-    pkgs.gcc
-    pkgs.gnumake
+    cmake
+    gcc
+    gnumake
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

@@ -127,6 +127,7 @@
       (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
       corefonts
       jetbrains-mono
+      font-awesome
   ];  
 
   # Some programs need SUID wrappers, can be configured further or are

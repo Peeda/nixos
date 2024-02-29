@@ -24,6 +24,7 @@
   # environment.
   home.packages = [
     pkgs.brave
+    pkgs.dolphin
     pkgs.spotify
     pkgs.neovim
     pkgs.kitty
@@ -100,7 +101,7 @@
   programs.fish = {
     enable = true;
     shellInit = "bind \\cH \'backward-kill-word\'\nstarship init fish | source\n
-    krabby random 1-5 --no-gmax --no-regional";
+    krabby random 1-5 --no-gmax --no-regional\nset -g fish_greeting";
     shellAliases = {
       rlox = "~/Programming/crafting-interpreters/rlox/src";
       rustboy = "cd ~/Programming/rustboy/rustboy-core/src/";

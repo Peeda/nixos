@@ -41,6 +41,7 @@
 
     rust-analyzer
     clang-tools
+    lua-language-server
     nil
 
     cmake
@@ -101,8 +102,13 @@
   };
   programs.fish = {
     enable = true;
-    shellInit = "bind \\cH \'backward-kill-word\'\nstarship init fish | source\n
-    krabby random 1-5 --no-gmax --no-regional\nset -g fish_greeting";
+    shellInit = ''
+    bind \cH 'backward-kill-word'
+    starship init fish | source
+    krabby random 1-5 --no-gmax --no-regional
+    set -g fish_greeting
+    export NIX_LD=$(nix eval --impure --raw --expr 'let pkgs = import <nixpkgs> {}; NIX_LD = pkgs.lib.fileContents "${pkgs.stdenv.cc}/nix-support/dynamic-linker"; in NIX_LD')
+    '';
     shellAliases = {
       rlox = "~/Programming/crafting-interpreters/rlox/src";
       rustboy = "cd ~/Programming/rustboy/rustboy-core/src/";

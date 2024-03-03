@@ -28,7 +28,6 @@
     spotify
     neovim
     kitty
-    cargo
     stow
     lazygit
     neofetch
@@ -38,15 +37,6 @@
     starship
     ripgrep
     trashy
-
-    rust-analyzer
-    clang-tools
-    lua-language-server
-    nil
-
-    cmake
-    gcc
-    gnumake
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -115,6 +105,10 @@
       r = "sudo modprobe -r hid-multitouch && sudo modprobe hid-multitouch";
       config = "cd ~/nixos/hosts/default/";
     };
+  };
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
   };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

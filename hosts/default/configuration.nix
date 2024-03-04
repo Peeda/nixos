@@ -58,7 +58,11 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.defaultSession = "hyprland";
+  services.xserver.displayManager.gdm = {
+    enable = true;
+    wayland = true;
+  };
   services.xserver.desktopManager.plasma5.enable = true;
 
   programs.hyprland.enable = true;
@@ -119,7 +123,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+   vim
    openssh
    unzip
   ];
@@ -147,6 +151,7 @@
   systemd.extraConfig = ''
     DefaultTimeoutStopSec=15s
     '';
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];

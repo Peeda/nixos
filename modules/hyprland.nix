@@ -10,7 +10,8 @@
     pulseaudio
   ];
   home.file.".config/hypr/hyprpaper.conf".text = ''
-    preload = ~/nixos/wallpapers/serenity.jpeg
-    wallpaper = eDP-1,~/nixos/wallpapers/serenity.jpeg
+    preload = ~/nixos/wallpapers/gamecube.jpg
+    wallpaper = ,~/nixos/wallpapers/gamecube.jpg
+    ipc = off
   '';
 }

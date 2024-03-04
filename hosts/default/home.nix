@@ -34,7 +34,6 @@
     onefetch
     distrobox
     krabby
-    starship
     ripgrep
     trashy
   ];
@@ -70,9 +69,10 @@
   #  /etc/profiles/per-user/peter/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    DIRENV_LOG_FORMAT="";
   };
 
+  programs.starship.enable = true;
   programs.git = {
     enable = true;
     userName = "Peter";
@@ -83,8 +83,8 @@
   };
   services.gammastep = {
     enable = true;
-    dawnTime = "0:00-4:59";
-    duskTime = "5:00-11:59";
+    latitude = 40.730610;
+    longitude = -73.935242;
     temperature = {
         day = 6500;
         night = 3200;
@@ -93,15 +93,15 @@
   programs.fish = {
     enable = true;
     shellInit = ''
-    bind \cH 'backward-kill-word'
-    starship init fish | source
+    fish_vi_key_bindings
+    bind \cH 'backward-kill-word' -M insert
     krabby random 1-5 --no-gmax --no-regional
     set -g fish_greeting
     export NIX_LD=$(nix eval --impure --raw --expr 'let pkgs = import <nixpkgs> {}; NIX_LD = pkgs.lib.fileContents "${pkgs.stdenv.cc}/nix-support/dynamic-linker"; in NIX_LD')
     '';
     shellAliases = {
-      rlox = "~/Programming/crafting-interpreters/rlox/src";
-      rustboy = "cd ~/Programming/rustboy/rustboy-core/src/";
+      rlox = "cd ~/Programming/crafting-interpreters/rlox/src";
+      rustboy = "cd ~/Programming/rustboy/";
       r = "sudo modprobe -r hid-multitouch && sudo modprobe hid-multitouch";
       config = "cd ~/nixos/hosts/default/";
     };

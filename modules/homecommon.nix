@@ -1,10 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hyprland.nix
-    ];
   nixpkgs.config.allowUnfreePredicate = _: true;
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -36,6 +32,7 @@
     krabby
     ripgrep
     trashy
+    wl-clipboard
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -70,6 +67,7 @@
   #
   home.sessionVariables = {
     DIRENV_LOG_FORMAT="";
+    NIXOS_OZONE_WL = "1";
   };
 
   programs.starship.enable = true;
@@ -103,7 +101,7 @@
       rlox = "cd ~/Programming/crafting-interpreters/rlox/src";
       rustboy = "cd ~/Programming/rustboy/";
       r = "sudo modprobe -r hid-multitouch && sudo modprobe hid-multitouch";
-      config = "cd ~/nixos/hosts/default/";
+      config = "cd ~/nixos/";
     };
   };
   programs.direnv = {

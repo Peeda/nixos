@@ -95,6 +95,7 @@
    vim
    openssh
    unzip
+   wget
   ];
 
   fonts.packages = with pkgs; [

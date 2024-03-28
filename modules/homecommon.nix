@@ -33,6 +33,7 @@
     ripgrep
     trashy
     wl-clipboard
+    python3
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -91,8 +92,7 @@
   programs.fish = {
     enable = true;
     shellInit = ''
-    fish_vi_key_bindings
-    bind \cH 'backward-kill-word' -M insert
+    bind \cH 'backward-kill-word'
     krabby random 1-5 --no-gmax --no-regional
     set -g fish_greeting
     export NIX_LD=$(nix eval --impure --raw --expr 'let pkgs = import <nixpkgs> {}; NIX_LD = pkgs.lib.fileContents "${pkgs.stdenv.cc}/nix-support/dynamic-linker"; in NIX_LD')

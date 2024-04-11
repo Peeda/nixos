@@ -3,8 +3,8 @@
 {
   imports =
     [
-      ../../modules/homecommon.nix
-      ../../modules/hyprland.nix
+      ../../modules/home/common.nix
+      ../../modules/home/hyprland.nix
     ];
     home.packages = with pkgs; [
       powertop

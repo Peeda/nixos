@@ -1,6 +1,6 @@
 { config, pkgs, ...}:
 
-let path_str = toString ../wallpapers/forest.png; in
+let path_str = toString ../../wallpapers/forest.png; in
 {
   home.packages = with pkgs; [
     rofi-wayland

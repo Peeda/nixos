@@ -20,6 +20,7 @@
   # environment.
   home.packages = with pkgs; [
     brave
+    floorp
     dolphin
     spotify
     neovim
@@ -34,6 +35,7 @@
     trashy
     wl-clipboard
     python3
+    anki
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

@@ -29,7 +29,10 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   services.xserver.enable = false;
-  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
   services.desktopManager.plasma6.enable = true;
 
   services.printing.enable = true;

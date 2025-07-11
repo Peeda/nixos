@@ -1,6 +1,7 @@
 {pkgs, inputs, ...}:
 
 {
+  imports = [./plasma.nix];
   programs = {
     git = {
       enable = true;
@@ -15,6 +16,7 @@
       };
       shellInit = ''
         bind \cH 'backward-kill-word'
+        set -g fish_greeting
         krabby random 1-5 --no-gmax --no-regional
       '';
     };

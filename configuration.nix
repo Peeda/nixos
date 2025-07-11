@@ -41,10 +41,12 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+  programs.fish.enable = true;
   users.users.peter = {
     isNormalUser = true;
     description = "Peter";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.fish;
   };
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
